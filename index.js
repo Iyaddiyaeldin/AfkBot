@@ -170,3 +170,11 @@ function createBot() {
 }
 
 createBot();
+
+if (config.utils['anti-afk'].enabled) {
+  bot.setControlState('jump', true); // يقفز باستمرار
+  if (config.utils['anti-afk'].sneak) {
+    bot.setControlState('sneak', true); // يزحف
+  }
+}
+
